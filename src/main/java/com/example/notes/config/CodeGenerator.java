@@ -52,7 +52,7 @@ public class CodeGenerator {
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("kangning");
-        gc.setFileOverride(false);
+        gc.setFileOverride(true);
         gc.setOpen(false);
         // gc.setSwagger2(true); 实体属性 Swagger2 注解
         mpg.setGlobalConfig(gc);
@@ -68,7 +68,8 @@ public class CodeGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(scanner("模块名"));
+        pc.setModuleName("notes");
+//        pc.setModuleName(scanner("模块名"));
         pc.setParent("com.example");
         mpg.setPackageInfo(pc);
 
